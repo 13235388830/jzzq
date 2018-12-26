@@ -29,7 +29,7 @@ import java.util.Map;
  * Created by Administrator on 2018/10/12.
  */
 public class SplashActivity extends BaseActivity {
-    ///1111
+    ///111111
     @ViewInject(R.id.miao)
     private TextView miao;
     @ViewInject(R.id.relat)
