@@ -78,6 +78,7 @@ public class SplashActivity extends BaseActivity {
                                     editor.putBoolean("isFirst",true);
                                     editor.commit();
                                     startActivity(new Intent(SplashActivity.this, SplashSecondActivity.class));
+                                    //1111
                                     finish();
                                 }
                             }
