@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ami.makemoneyby"
+          android:installLocation="auto"
+          android:versionCode="101"
+          android:versionName="1.0.1">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="26"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- UMent End -->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zhy.android7.fileprovider1"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--接三方的时候,修改这里的包名-->
+                <category android:name="com.ami.makemoneyby"/>
+            </intent-filter>
+        </activity>
+        <!--极光推送-->
+        <receiver
+            android:name=".receiver.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+
+                <category android:name="com.ami.makemoneyby"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".downloadapp.DownloadService"></service>
+        <activity android:name=".main.Home.activity.HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".main.Home.activity.HeadActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".main.Home.activity.TabContentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".main.Information.activity.InformationActivity" android:screenOrientation="portrait"/>
+
+
+        <activity android:name=".main.My.activity.MessageActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".main.My.activity.AboutActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".main.My.activity.FeedbackActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".UpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".WebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".main.My.activity.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SplashSecondActivity"/>
+        <activity android:name=".main.My.activity.LoginYYActivity"/>
+    </application>
+
+</manifest>

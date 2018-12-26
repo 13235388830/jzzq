@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">兼职赚钱</string>
+
+    <string name="home">首页</string>
+    <string name="information">资讯</string>
+    <string name="my">我的</string>
+
+
+    <string name="feeback_txt_hint">我们正在倾听您的建议...</string>
+    <string name="login_activity_phonenum">请输入您的手机号码</string>
+    <string name="no_cache">暂无缓存</string>
+
+</resources>
