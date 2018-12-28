@@ -29,7 +29,7 @@ import java.util.Map;
  * Created by Administrator on 2018/10/12.
  */
 public class SplashActivity extends BaseActivity {
-    ///111111
+    ///
     @ViewInject(R.id.miao)
     private TextView miao;
     @ViewInject(R.id.relat)
@@ -73,7 +73,7 @@ public class SplashActivity extends BaseActivity {
                             } else {
 
                                 if (spf.getBoolean("isFirst",false)) {
-                                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                                    startActivity(new Intent(SplashActivity.this, SplashSecondActivity.class));
                                     finish();
                                 } else {
                                     editor.putBoolean("isFirst",true);
@@ -86,7 +86,7 @@ public class SplashActivity extends BaseActivity {
 
                         } else {
                             if (spf.getBoolean("isFirst",false)) {
-                                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                                startActivity(new Intent(SplashActivity.this, SplashSecondActivity.class));
                                 finish();
                             } else {
                                 editor.putBoolean("isFirst",true);

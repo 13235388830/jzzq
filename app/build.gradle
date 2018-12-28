@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.ami.makemoneyby"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 3
         versionName "1.10"
@@ -43,7 +43,8 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.0'
     implementation project(':jpush')
     compile project(':zProgressHUD')
-
+    compile project(path: ':android-pickers')
+    compile project(':corelibrary');
     // LeanCloud 基础包
     implementation ('cn.leancloud.android:avoscloud-sdk:4.7.8')
 }

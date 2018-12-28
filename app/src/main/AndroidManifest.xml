@@ -8,18 +8,19 @@
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="26"/>
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <!-- UMent End -->
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
-    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -46,7 +47,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+                android:resource="@xml/provider_paths"/>
         </provider>
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
@@ -76,23 +77,68 @@
         </receiver>
 
         <service android:name=".downloadapp.DownloadService"></service>
-        <activity android:name=".main.Home.activity.HomeActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".main.Home.activity.HeadActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".main.Home.activity.TabContentActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".main.Information.activity.InformationActivity" android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".main.Home.activity.HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".main.Home.activity.HeadActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".main.Home.activity.TabContentActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".main.Information.activity.InformationActivity"
+            android:screenOrientation="portrait"/>
 
 
-        <activity android:name=".main.My.activity.MessageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".main.My.activity.MessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
 
-        <activity android:name=".main.My.activity.AboutActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".main.My.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
 
-        <activity android:name=".main.My.activity.FeedbackActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".UpdateActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".WebViewActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".main.My.activity.LoginActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".SplashSecondActivity"/>
-        <activity android:name=".main.My.activity.LoginYYActivity"/>
+        <activity
+            android:name=".main.My.activity.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".UpdateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".WebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".main.My.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".SplashSecondActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".main.My.activity.LoginYYActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".SplashThirdActivity"
+            />
     </application>
 
 </manifest>

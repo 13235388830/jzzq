@@ -4,13 +4,14 @@
     <color name="colorPrimaryDark">#F68E54</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
-
+    <color name="white7">#A6FFFFFF</color>
     <color name="black">#333333</color>
 
     <color name="gray">#999</color>
 
     <!-- 亮灰色  -->
-    <color name="grey">#C9C9C9</color>
+    <color name="grey">#10C9C9C9</color>
+    <color name="grey2">#20C9C9C9</color>
 
     <!-- 字体未选中颜色 灰白-->
     <color name="hui">#999999</color>

@@ -1,1 +1,2 @@
-include ':app',':LRecyclerview_library',':shapeloading',':jpush', ':zProgressHUD'
+include ':app',':LRecyclerview_library',':shapeloading',':jpush', ':zProgressHUD', ':android-pickers',':corelibrary'
+

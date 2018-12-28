@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ver="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/login_yzm_img"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:scaleType="fitXY"/>
+
+        <com.dalimao.corelibrary.VerificationCodeInput
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"
+            ver:box="4"
+            ver:box_bg_focus="@drawable/verification_edit_bg_focus"
+            ver:box_bg_normal="@drawable/verification_edit_bg_normal"
+            ver:child_h_padding="5dp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
