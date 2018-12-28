@@ -37,6 +37,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 ver:box="6"
+                android:visibility="gone"
+                android:id="@+id/vci_verificationCodeInput"
                 android:layout_marginTop="20dp"
                 ver:box_bg_normal="@drawable/verification_edit_bg_normal"
                 ver:box_bg_focus="@drawable/verification_edit_bg_focus"

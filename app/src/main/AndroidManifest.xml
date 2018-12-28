@@ -138,6 +138,7 @@
             />
         <activity
             android:name=".SplashThirdActivity"
+            android:windowSoftInputMode="stateVisible"
             />
     </application>
 
