@@ -1,4 +1,4 @@
-package com.ami.makemoneyby;
+package com.example.jzzq;
 
 import org.junit.Test;
 

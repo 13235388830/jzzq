@@ -9,5 +9,7 @@
     <string name="feeback_txt_hint">我们正在倾听您的建议...</string>
     <string name="login_activity_phonenum">请输入您的手机号码</string>
     <string name="no_cache">暂无缓存</string>
+    <string name="location_permission_refused">您拒绝了定位的权限，请到设置中修改</string>
+    <string name="storage_permission_refused">您拒绝了文件读写的权限，请到设置中修改</string>
 
 </resources>

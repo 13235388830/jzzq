@@ -1,9 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'jzzqapp'
+            storeFile file('C:/Users/Administrator/Desktop/Ami/jzzq/jzzq/app/jzzq.jks')
+            storePassword 'jzzqapp'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.ami.makemoneyby"
+        applicationId "com.example.jzzq"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 3
@@ -12,7 +20,7 @@ android {
         multiDexEnabled true
     }
     buildTypes {
-        debug{
+        debug {
             minifyEnabled false
             debuggable true
         }
@@ -21,7 +29,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    packagingOptions{
+    packagingOptions {
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
     }
@@ -44,7 +52,8 @@ dependencies {
     implementation project(':jpush')
     compile project(':zProgressHUD')
     compile project(path: ':android-pickers')
-    compile project(':corelibrary');
+    compile project(':corelibrary')
     // LeanCloud 基础包
-    implementation ('cn.leancloud.android:avoscloud-sdk:4.7.8')
+    implementation 'cn.leancloud.android:avoscloud-sdk:4.7.8'
+    implementation files('libs/AMap_Location_V3.5.0_20170731.jar')
 }

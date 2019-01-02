@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ami.makemoneyby"
+          package="com.example.jzzq"
           android:installLocation="auto"
           android:versionCode="101"
           android:versionName="1.0.1">
@@ -58,9 +58,16 @@
                 <action android:name="cn.jpush.android.ui.PushActivity"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <!--接三方的时候,修改这里的包名-->
-                <category android:name="com.ami.makemoneyby"/>
+                <category android:name="com.example.jzzq"/>
             </intent-filter>
         </activity>
+        <!--高德定位-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="52cbcf244302108d637e31bca3e5031b"/>
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService"/>
+        <!--高德定位 end-->
         <!--极光推送-->
         <receiver
             android:name=".receiver.JPushReceiver"
@@ -72,7 +79,7 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
 
-                <category android:name="com.ami.makemoneyby"/>
+                <category android:name="com.example.jzzq"/>
             </intent-filter>
         </receiver>
 

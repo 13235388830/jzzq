@@ -12,7 +12,7 @@
     <!-- 亮灰色  -->
     <color name="grey">#10C9C9C9</color>
     <color name="grey2">#20C9C9C9</color>
-
+    <color name="line_color">#DDDDDD</color>
     <!-- 字体未选中颜色 灰白-->
     <color name="hui">#999999</color>
     <!-- 灰 黑-->

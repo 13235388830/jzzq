@@ -4,9 +4,6 @@
     android:layout_height="match_parent">
 
     <include layout="@layout/home_head"/>
-
-
-
     <com.github.jdsjlzx.recyclerview.LRecyclerView
         android:id="@+id/home_recycleview"
         android:layout_width="match_parent"
