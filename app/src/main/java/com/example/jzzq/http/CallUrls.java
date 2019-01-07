@@ -10,7 +10,7 @@ public enum CallUrls {
 
 
     //public static String PFURL = "http://api.ruyijinkong.com/";
-    public static String PFURL0 = "https://appid-apkk.xx-app.com/frontApi/getAboutUs?";
+    public static String PFURL0 = "https://apkk.gg-app.com/back/api.php?app_id=4564365";
 
     public static String PFURL = "http://android_api.ruyijinkong.com/";
 

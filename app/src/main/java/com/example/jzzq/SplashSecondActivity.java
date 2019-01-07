@@ -1,7 +1,6 @@
 package com.example.jzzq;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.text.Editable;
@@ -13,10 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.jzzq.main.My.activity.LoginActivity;
 import com.example.jzzq.utils.AddressPickTask;
 
 import cn.addapp.pickers.entity.Province;
+import cn.addapp.pickers.entity.Province2;
 
 public class SplashSecondActivity extends BaseActivity implements View.OnClickListener {
     private ImageView manImg, maleImg;

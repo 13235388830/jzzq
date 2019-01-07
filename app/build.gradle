@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation project(':LRecyclerview_library')
@@ -52,8 +53,11 @@ dependencies {
     implementation project(':jpush')
     compile project(':zProgressHUD')
     compile project(path: ':android-pickers')
+
     compile project(':corelibrary')
     // LeanCloud 基础包
     implementation 'cn.leancloud.android:avoscloud-sdk:4.7.8'
     implementation files('libs/AMap_Location_V3.5.0_20170731.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+
 }

@@ -26,6 +26,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         return new MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.home_item, parent, false));
     }
 

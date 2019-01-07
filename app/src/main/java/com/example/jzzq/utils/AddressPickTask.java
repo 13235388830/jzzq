@@ -3,33 +3,19 @@ package com.example.jzzq.utils;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.os.Looper;
-import android.os.Message;
-import android.text.TextUtils;
-import android.util.Log;
 
-import com.alibaba.fastjson.JSON;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.GetCallback;
 import com.google.gson.Gson;
 
-import java.io.IOException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 import cn.addapp.pickers.entity.Province;
 import cn.addapp.pickers.listeners.OnLinkageListener;
+import cn.addapp.pickers.listeners.OnLinkageListener2;
 import cn.addapp.pickers.picker.AddressPicker;
-import cn.addapp.pickers.util.ConvertUtils;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 
 /**

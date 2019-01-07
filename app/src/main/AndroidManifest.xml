@@ -147,6 +147,7 @@
             android:name=".SplashThirdActivity"
             android:windowSoftInputMode="stateVisible"
             />
+        <activity android:name=".HomeWebViewActivity" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

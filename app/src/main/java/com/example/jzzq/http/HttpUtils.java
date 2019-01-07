@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -30,9 +31,6 @@ public class HttpUtils {
     private volatile static HttpUtils instance;
     private Handler handler;
 
-    public static String getKey() {
-        return "DPUhRQT8GJY3pvdijjJBag==";
-    }
 
     private HttpUtils() {
         handler = new Handler(Looper.getMainLooper());
@@ -62,11 +60,12 @@ public class HttpUtils {
             public void onSuccess(String result) {
                 Log.e(requestParams.getUri(), result);
                 Log.e("result", result);
+                String str2 = new String(Base64.decode(result.getBytes(), Base64.DEFAULT));
                 if (hander != null) {
                     Message msg = new Message();
                     if (msg != null) {
                         Gson gson = new Gson();
-                        T obj = gson.fromJson(result, t);
+                        T obj = gson.fromJson(str2, t);
                         msg.obj = obj;
                     }
                     msg.what = whats;

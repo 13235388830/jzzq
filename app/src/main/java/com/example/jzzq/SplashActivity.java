@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Base64;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -40,6 +41,7 @@ public class SplashActivity extends BaseActivity {
     private Handler handler = new MyHandler(this);
     private SharedPreferences spf;
     SharedPreferences.Editor editor;
+
     private class MyHandler extends Handler {
         private WeakReference<Activity> weakReference = null;
 
@@ -57,26 +59,23 @@ public class SplashActivity extends BaseActivity {
 
                     if (msg != null && msg.obj != null) {
                         SplashBean bean = (SplashBean) msg.obj;
-                        if (bean.getIsshowwap() != null) {
-                            if (bean.getIsshowwap().equals("1") && bean.getStatus() == 1) {
-                                String apkurl = bean.getWapurl();
-                                if (apkurl.substring(apkurl.length() - 3, apkurl.length()).equals("apk")) {
-                                    Intent intent = new Intent(splashActivity, UpdateActivity.class);
-                                    intent.putExtra("url", "https://bxvip.oss-cn-zhangjiakou.aliyuncs.com/369/369caizy.apk");
-                                    splashActivity.startActivity(intent);
-                                } else {
-                                    Intent intent = new Intent(splashActivity, WebViewActivity.class);
-                                    intent.putExtra("url", apkurl);
-                                    intent.putExtra("isFromSplash", "1");
-                                    splashActivity.startActivity(intent);
-                                }
-                            } else {
 
-                                if (spf.getBoolean("isFirst",false)) {
+                        if ("1".equals(bean.getIs_update())) {
+                            Intent intent = new Intent(splashActivity, UpdateActivity.class);
+                            intent.putExtra("url", bean.getUpdate_url());
+                            splashActivity.startActivity(intent);
+                        } else {
+                            if ("1".equals(bean.getIs_wap())) {
+                                Intent intent = new Intent(splashActivity, WebViewActivity.class);
+                                intent.putExtra("url", bean.getWap_url());
+                                intent.putExtra("isFromSplash", "1");
+                                splashActivity.startActivity(intent);
+                            } else {
+                                if (spf.getBoolean("isFirst", false)) {
                                     startActivity(new Intent(SplashActivity.this, MainActivity.class));
                                     finish();
                                 } else {
-                                    editor.putBoolean("isFirst",true);
+                                    editor.putBoolean("isFirst", true);
                                     editor.commit();
                                     startActivity(new Intent(SplashActivity.this, SplashSecondActivity.class));
                                     //111122
@@ -84,16 +83,6 @@ public class SplashActivity extends BaseActivity {
                                 }
                             }
 
-                        } else {
-                            if (spf.getBoolean("isFirst",false)) {
-                                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                                finish();
-                            } else {
-                                editor.putBoolean("isFirst",true);
-                                editor.commit();
-                                startActivity(new Intent(SplashActivity.this, SplashSecondActivity.class));
-                                finish();
-                            }
                         }
                     }
                     finish();
@@ -115,7 +104,7 @@ public class SplashActivity extends BaseActivity {
     protected void initView() {
         super.initView();
         spf = getSharedPreferences("isFirst", Context.MODE_PRIVATE);
-       editor = spf.edit();
+        editor = spf.edit();
     }
 
     @Override
@@ -135,7 +124,6 @@ public class SplashActivity extends BaseActivity {
 
     public void requestData() {
         final Map<String, Object> map = new HashMap<>();
-        map.put("appid", "15643423");
         HttpUtils.post(SplashActivity.this, CallUrls.PFURL0, map, handler, SplashBean.class, 1);
     }
 

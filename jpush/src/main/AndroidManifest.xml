@@ -120,7 +120,7 @@
         <!--接三方的时候,修改这里的APP_KEY-->
         <meta-data
             android:name="JPUSH_APPKEY"
-            android:value="aaa71b48ae40fa0eee7f480b"/>
+            android:value="e2cc88e8453c23a6f7caae34"/>
 
     </application>
 </manifest>
